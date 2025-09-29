@@ -4,7 +4,7 @@
 
 This is a robust, scalable e-commerce platform backend developed using Spring Boot. This project provides a complete Java-based solution for managing an online marketplace, including user authentication, product catalog, order processing, payment integrations, seller management, and administrative controls. The application leverages modern Java technologies to ensure high performance, security, and maintainability.
 
-The project started on 9/7/2025 and is designed to support a full-fledged e-commerce ecosystem with features like JWT-based authentication, multi-role user management (customers, sellers, admins), real-time payment processing via Razorpay and Stripe, and comprehensive order tracking.
+This is designed to support a full-fledged e-commerce ecosystem with features like JWT-based authentication, multi-role user management (customers, sellers, admins), real-time payment processing via Razorpay and Stripe, and comprehensive order tracking.
 
 ## Project Structure
 
@@ -168,8 +168,6 @@ This platform offers a wide range of features essential for an e-commerce platfo
 - **Order Processing and Management**: Place orders, track order status, handle order items, and manage order history.
 - **Payment Integration**: Secure payment processing using Razorpay and Stripe, with support for multiple payment methods and status tracking.
 - **Seller Management**: Seller onboarding, product management for sellers, seller reports, and order handling for sellers.
-- **Review and Rating System**: User reviews and ratings for products.
-- **Coupon and Deal Management**: Admin-controlled coupons and deals for promotions.
 - **Admin Controls**: Administrative oversight for users, products, orders, coupons, and platform analytics.
 - **Transaction Tracking**: Detailed transaction logs for payments and orders.
 - **Email Notifications**: Automated emails for order confirmations, OTPs, and updates using Spring Boot Mail.
@@ -199,67 +197,7 @@ Before running the application, ensure you have the following installed:
 - **Maven**: Version 3.6 or higher
 - **MySQL**: Version 8.0 or higher (for database)
 - **Git**: For cloning the repository
-- **IDE**: IntelliJ IDEA, Eclipse, or VS Code (recommended for development)
-
-## Installation
-
-1. **Clone the Repository**:
-
-   ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
-   ```
-
-2. **Configure the Database**:
-
-   - Create a MySQL database (e.g., `ecommerce_db`).
-   - Update the database configuration in `src/main/resources/application.properties` (or `application.yml` if using YAML):
-     ```properties
-     spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce_db
-     spring.datasource.username=your-username
-     spring.datasource.password=your-password
-     spring.jpa.hibernate.ddl-auto=update
-     spring.jpa.show-sql=true
-     ```
-
-3. **Configure Payment Gateways** (Optional for full functionality):
-
-   - Obtain API keys from Razorpay and Stripe.
-   - Add them to `application.properties`:
-     ```properties
-     razorpay.api.key=your-razorpay-key
-     razorpay.api.secret=your-razorpay-secret
-     stripe.api.key=your-stripe-key
-     ```
-
-4. **Install Dependencies**:
-   ```bash
-   mvn clean install
-   ```
-
-## Running the Application
-
-1. **Build the Project**:
-
-   ```bash
-   mvn clean compile
-   ```
-
-2. **Run the Application**:
-
-   - Using Maven:
-     ```bash
-     mvn spring-boot:run
-     ```
-   - Or, package and run the JAR:
-     ```bash
-     mvn clean package
-     java -jar target/ecommerce-platform-0.0.1-SNAPSHOT.jar
-     ```
-
-3. **Access the Application**:
-   - The application will start on `http://localhost:8080` by default.
-   - Use tools like Postman or Swagger UI (if configured) to interact with the APIs.
+- **IDE**: VS Code (recommended for development)
 
 ## API Documentation
 
